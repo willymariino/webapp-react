@@ -2,7 +2,7 @@ function MovieCard({ movie }) {
     return (
         <div className="card">
             <div className="card-image">
-                <img src="{movie.image}" alt="{movie.title}" className="card-image" />
+                <img src={movie.image} alt={movie.title} className="card-image" />
             </div>
 
             <div className="card-content">
