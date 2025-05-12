@@ -6,7 +6,7 @@ function Movie_list() {
 
     function fetchMovies() {
         axios.get("http://127.0.0.1:3000/movies")
-            .then((res) => setMovies(res.data.results))
+            .then((res) => setMovies(res.data))
             .catch((error) => console.error("errore durante il caricamento", error))
     }
 
