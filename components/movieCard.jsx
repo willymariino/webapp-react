@@ -4,7 +4,9 @@ function MovieCard({ movie }) {
     return (
         <div className="card">
             <div className="card-image">
-              <Link to={"movie-detail/" + movie.index}  <img src={movie.image} alt={movie.title} className="card-image" /> </link>
+                <Link to={"movie-detail/" + movie.id}>
+                    <img src={movie.image} alt={movie.title} className="card-image" />
+                </Link>
             </div>
 
             <div className="card-content">
