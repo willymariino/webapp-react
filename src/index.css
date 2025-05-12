@@ -29,3 +29,18 @@ nav {
 .nav-link:hover {
   color: blue;
 }
+
+.card-image {
+  max-width: 70%;
+}
+
+.movie-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 2%;
+}
+
+.card {
+  width: calc((100% - 60px) / 4);
+}
