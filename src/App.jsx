@@ -3,6 +3,7 @@ import DefaultLayout from "../Layouts/defaultLayout"
 import Homepage from "../pages/homepage"
 import About from "../pages/about"
 import Movie_list from "../pages/movie-list"
+import Movie_detail from "../pages/movie_detail"
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
             <Route path="/homepage" Component={Homepage} />
             <Route path="/about" Component={About} />
             <Route path="/movie-list" Component={Movie_list} />
-
+            <Route path="/movie-list:id" Component={Movie_detail} />
           </Route>
 
 
