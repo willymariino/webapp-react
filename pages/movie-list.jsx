@@ -2,6 +2,7 @@ import axios from "axios"
 import { useState, useEffect } from "react"
 import MovieCard from "../components/movieCard"
 
+
 function Movie_list() {
     const [movies, setMovies] = useState([])
 
