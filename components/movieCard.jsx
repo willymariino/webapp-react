@@ -16,7 +16,7 @@ function MovieCard({ movie }) {
                 <p><strong>Genere:</strong> {movie.genre}</p>
                 <p><strong>Anno:</strong> {movie.release_year}</p>
                 <p>{movie.abstract}</p>
-                <p><strong>Media recensioni</strong>{movie.media_recensioni || "N.D."}</p>
+                <p><strong>Media recensioni: </strong>{movie.media_recensioni || "N.D."}</p>
             </div>
 
         </div >
