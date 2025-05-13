@@ -22,7 +22,7 @@ function Movie_detail() {
     return (
         <>
             <h1>dettaglio del film: </h1>
-            <MovieCard />
+            <MovieCard movie={movie} />
         </>
     )
 }
