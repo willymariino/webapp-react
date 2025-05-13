@@ -5,7 +5,7 @@ import MovieCard from "../components/movieCard"
 
 
 function Movie_detail() {
-    const [movies, setMovies] = useState()
+    const [movies, setMovies] = useState(null)
     const { id } = useParams()
 
     function getMovies() {
@@ -21,6 +21,7 @@ function Movie_detail() {
 
     return (
         <>
+            <h1>dettaglio del film: </h1>
             <MovieCard />
         </>
     )
