@@ -6,18 +6,28 @@ import MovieCard from "../components/movieCard"
 
 function Movie_detail() {
     const [movie, setMovie] = useState(null)
+    const [loading, setLoading] = useState(true)
     const { id } = useParams()
 
     function getMovies() {
         axios.get("http://127.0.0.1:3000/movies/" + id)
             .then((res) => {
                 setMovie(res.data)
+                setLoading(false)
             })
             .catch((error) => console.error("errore durante il caricamento", error)
             )
     }
 
     useEffect(getMovies, [id])
+
+    if (loading) {
+        return (
+            <div>
+                caricamento in corso...
+            </div>
+        )
+    }
 
     return (
         <>
