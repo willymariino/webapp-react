@@ -5,13 +5,13 @@ import MovieCard from "../components/movieCard"
 
 
 function Movie_detail() {
-    const [movies, setMovies] = useState(null)
+    const [movie, setMovie] = useState(null)
     const { id } = useParams()
 
     function getMovies() {
         axios.get("http://127.0.0.1:3000/movies/" + id)
             .then((res) => {
-                setMovies(res.data)
+                setMovie(res.data)
             })
             .catch((error) => console.error("errore durante il caricamento", error)
             )
