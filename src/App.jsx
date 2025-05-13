@@ -19,7 +19,7 @@ function App() {
             <Route path="/homepage" Component={Homepage} />
             <Route path="/about" Component={About} />
             <Route path="/movie-list" Component={Movie_list} />
-            <Route path="/movie-list:id" Component={Movie_detail} />
+            <Route path="/movie-list/movie-detail/:id" Component={Movie_detail} />
           </Route>
 
 
