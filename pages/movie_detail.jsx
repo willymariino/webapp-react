@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
 import axios from "axios"
+import MovieCard from "../components/movieCard"
 
 
 function Movie_detail() {
@@ -20,7 +21,7 @@ function Movie_detail() {
 
     return (
         <>
-
+            <MovieCard />
         </>
     )
 }
