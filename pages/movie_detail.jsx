@@ -41,11 +41,15 @@ function Movie_detail() {
 
             </div>
 
-            <div className="reviews">
+            <section className="reviews">
                 {movie.reviews.map(review => (
                     <ReviewCard key={review.id} review={review} />
                 ))}
-            </div>
+            </section>
+
+            <section className="add-review">
+
+            </section>
 
 
         </>
