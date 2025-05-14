@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 import MovieCard from "../components/movieCard"
 import ReviewCard from "../components/reviewCard"
+import ReviewForm from "../components/addReview"
 
 
 function Movie_detail() {
@@ -48,7 +49,7 @@ function Movie_detail() {
             </section>
 
             <section className="add-review">
-
+                <ReviewForm />
             </section>
 
 
