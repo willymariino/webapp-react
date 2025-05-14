@@ -1,5 +1,6 @@
+import axios from "axios"
 import { useState } from "react"
-function ReviewForm() {
+function ReviewForm({ movie_id, refreshMovie }) {
 
     const initialValues = {
         name: "",
@@ -31,6 +32,14 @@ function ReviewForm() {
         e.preventDefault()
 
         console.log(formData)
+        console.log(movie_id)
+
+        axios.post(`http://127.0.0.1:3000/movies/${movie_id}/reviews`, formData)
+            .then(response => {
+                refreshMovie()
+            })
+            .catch(err => console.log(err))
+
     }
 
 

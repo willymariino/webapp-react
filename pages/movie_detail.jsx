@@ -49,7 +49,7 @@ function Movie_detail() {
             </section>
 
             <section className="add-review">
-                <ReviewForm />
+                <ReviewForm movie_id={id} refreshMovie={getMovies} />
             </section>
 
 
