@@ -67,10 +67,10 @@ nav {
 
 .review-card {
   border: 2px solid rgba(128, 128, 128, 0.5);
-  min-width: 50%;
-  border-radius: 35px;
-  padding: 1%;
+  min-width: 50% !important;
+  border-radius: 35px !important;
+  padding: 1% !important;
   background-color: rgba(30, 210, 207, 0.1);
   box-shadow: 0 0 10px rgba(128, 128, 128, 0, 5);
-
+  /*  bootstrap mi sovrascrive il css allargandomi i container delle recensioni*/
 }
