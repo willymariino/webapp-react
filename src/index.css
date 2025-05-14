@@ -67,4 +67,5 @@ nav {
 
 .review-card {
   border: 1px solid black;
+  min-width: 50%;
 }
