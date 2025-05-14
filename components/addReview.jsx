@@ -2,12 +2,28 @@ import { useState } from "react"
 function ReviewForm() {
 
     const initialValues = {
-        name: "nome",
-        text: "lorem",
+        name: "",
+        text: "",
         vote: 1
     }
 
+
+
     const [formData, setFormData] = useState(initialValues)
+
+    const handleFormData = (e) => {
+        const { name, value } = e.target
+        console.log("voglio modificare questo campo")
+        let currentValue = value
+        if (name === 'vote') {
+            currentValue = parseInt(value)
+        }
+
+        setFormData((formData) => ({
+            ...formData,
+            [name]: currentValue
+        }))
+    }
 
 
 
@@ -24,21 +40,21 @@ function ReviewForm() {
                         <div className="mb-3">
                             <label htmlFor="reviewer-name" className="form-label">nome recensore</label>
                             <input type="text" className="form-control" id="reviewer-name" placeholder="inserisci il tuo nome" value={formData.name}
-                                onChange={(e) => setFormData(e.target.value)} />
+                                onChange={handleFormData} />
                         </div>
 
 
                         <div className="mb-3">
                             <label htmlFor="review-text" className="form-label">testo della recensione</label>
                             <textarea className="form-control" id="review-text" rows="3" value={formData.text}
-                                onChange={(e) => setFormData(e.target.value)}></textarea>
+                                onChange={handleFormData}></textarea>
                         </div>
 
 
                         <div className="mb-3">
                             <label htmlFor="review-vote" className="form-label">voto:</label>
                             <input type="number" min={1} max={5} className="form-control" id="review-vote" value={formData.vote}
-                                onChange={(e) => setFormData(e.target.value)} />
+                                onChange={handleFormData} />
                         </div>
 
                         <div className="mb-3">
