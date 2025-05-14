@@ -2,19 +2,27 @@ function ReviewForm() {
     return (
 
         <>
-            <div className="card">
+            <div className="card container d-flex justify-content-center mt-3">
                 <div className="card-header">
-                    Scrivi un arecensione su questo libro
+                    Scrivi una recensione su questo libro
                 </div>
                 <div className="card-body">
 
                     <div className="mb-3">
-                        <label htmlFor="exampleFormControlInput1" className="form-label">Email address</label>
-                        <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
+                        <label htmlFor="reviewer-name" className="form-label">nome recensore</label>
+                        <input type="text" className="form-control" id="reviewer-name" placeholder="inserisci il tuo nome" />
                     </div>
                     <div className="mb-3">
-                        <label htmlFor="exampleFormControlTextarea1" className="form-label">Example textarea</label>
-                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <label htmlFor="review-text" className="form-label">testo della recensione</label>
+                        <textarea className="form-control" id="review-text" rows="3"></textarea>
+                    </div>
+                    <div className="mb-3">
+                        <label htmlFor="review-vote" className="form-label">voto:</label>
+                        <input type="number" min={1} max={5} className="form-control" id="review-vote" />
+                    </div>
+
+                    <div className="mb-3">
+                        <button type="submit" class="btn btn-primary">Primary</button>
                     </div>
 
 
