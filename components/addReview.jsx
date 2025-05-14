@@ -16,6 +16,9 @@ function ReviewForm() {
         console.log("voglio modificare questo campo")
         let currentValue = value
 
+        if (name === 'vote') {
+            currentValue = parseInt(value)
+        }
 
 
         setFormData((formData) => ({
@@ -24,12 +27,18 @@ function ReviewForm() {
         }))
     }
 
+    const sendData = (e) => {
+        e.preventDefault()
+
+        console.log(formData)
+    }
+
 
 
     return (
 
         <>
-            <form>
+            <form onSubmit={sendData}>
                 <div className="card container d-flex justify-content-center mt-3 w-50">
                     <div className="card-header">
                         Scrivi una recensione su questo film
