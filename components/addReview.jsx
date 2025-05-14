@@ -7,7 +7,7 @@ function ReviewForm() {
         vote: 1
     }
 
-    const [formData, setFormData] = useState(intialValues)
+    const [formData, setFormData] = useState(initialValues)
 
 
 
