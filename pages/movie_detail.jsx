@@ -31,8 +31,22 @@ function Movie_detail() {
 
     return (
         <>
-            <h1>dettaglio del film: </h1>
-            <MovieCard movie={movie} />
+            <div className="detail-header">
+                <h1 className="detail-title">dettaglio del film: </h1>
+            </div>
+            <div className="movie-detail-container">
+
+                <MovieCard movie={movie} />
+
+            </div>
+
+            <div className="reviews">
+                <h2>recensioni:</h2>
+                <p>{movie.text}</p>
+                <p>voto: {movie.vote}</p>
+            </div>
+
+
         </>
     )
 }
