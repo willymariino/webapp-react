@@ -1,4 +1,4 @@
-function reviewForm() {
+function ReviewForm() {
     return (
 
         <>
@@ -7,4 +7,4 @@ function reviewForm() {
     )
 }
 
-export default reviewForm
+export default ReviewForm
