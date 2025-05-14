@@ -2,7 +2,7 @@ function ReviewForm() {
     return (
 
         <>
-            <div className="card container d-flex justify-content-center mt-3">
+            <div className="card container d-flex justify-content-center mt-3 w-50">
                 <div className="card-header">
                     Scrivi una recensione su questo libro
                 </div>
@@ -22,7 +22,7 @@ function ReviewForm() {
                     </div>
 
                     <div className="mb-3">
-                        <button type="submit" class="btn btn-primary">Primary</button>
+                        <button type="submit" className="btn btn-primary">aggiungi</button>
                     </div>
 
 
