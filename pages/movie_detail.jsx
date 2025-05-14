@@ -42,7 +42,7 @@ function Movie_detail() {
             </div>
 
             <div className="reviews">
-                {reviews.map(review => (
+                {movie.reviews.map(review => (
                     <ReviewCard key={review.id} review={review} />
                 ))}
             </div>
