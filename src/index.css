@@ -64,3 +64,7 @@ nav {
   margin-top: 2%;
   align-items: center;
 }
+
+.review-card {
+  border: 5px solid black;
+}
