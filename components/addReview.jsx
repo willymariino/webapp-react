@@ -2,7 +2,7 @@ import { useState } from "react"
 function ReviewForm() {
 
     const initialValues = {
-        name: "gfh",
+        name: "nome",
         text: "lorem",
         vote: 1
     }
@@ -23,15 +23,22 @@ function ReviewForm() {
 
                         <div className="mb-3">
                             <label htmlFor="reviewer-name" className="form-label">nome recensore</label>
-                            <input type="text" className="form-control" id="reviewer-name" placeholder="inserisci il tuo nome" value={formData.name} />
+                            <input type="text" className="form-control" id="reviewer-name" placeholder="inserisci il tuo nome" value={formData.name}
+                                onChange={(e) => setFormData(e.target.value)} />
                         </div>
+
+
                         <div className="mb-3">
                             <label htmlFor="review-text" className="form-label">testo della recensione</label>
-                            <textarea className="form-control" id="review-text" rows="3" value={formData.text}></textarea>
+                            <textarea className="form-control" id="review-text" rows="3" value={formData.text}
+                                onChange={(e) => setFormData(e.target.value)}></textarea>
                         </div>
+
+
                         <div className="mb-3">
                             <label htmlFor="review-vote" className="form-label">voto:</label>
-                            <input type="number" min={1} max={5} className="form-control" id="review-vote" value={formData.vote} />
+                            <input type="number" min={1} max={5} className="form-control" id="review-vote" value={formData.vote}
+                                onChange={(e) => setFormData(e.target.value)} />
                         </div>
 
                         <div className="mb-3">
