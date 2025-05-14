@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
 import axios from "axios"
 import MovieCard from "../components/movieCard"
+import ReviewCard from "../components/reviewCard"
 
 
 function Movie_detail() {
@@ -41,9 +42,9 @@ function Movie_detail() {
             </div>
 
             <div className="reviews">
-                <h2>recensioni:</h2>
-                <p>{movie.text}</p>
-                <p>voto: {movie.vote}</p>
+                {reviews.map(review => (
+                    <ReviewCard key={review.id} review={review} />
+                ))}
             </div>
 
 
