@@ -1,8 +1,6 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
 import MovieCard from "../components/movieCard"
-import { useContext } from "react"
-import countContext from "../context/globalCotext"
 
 
 
@@ -27,11 +25,11 @@ function Movie_list() {
             <h1>lista dei movies</h1>
 
             <div className="movie-container">
-                {movies.map(movie => (
-                    <MovieCard key={movie.id} movie={movie} />
-                ))}
-
-
+                {movies.map((movie, index) =>
+                    movie ? (
+                        <MovieCard key={movie.id || index} movie={movie} />
+                    ) : null
+                )}
             </div>
         </>
     )
