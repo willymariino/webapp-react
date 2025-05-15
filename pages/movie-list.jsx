@@ -1,15 +1,23 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
 import MovieCard from "../components/movieCard"
+import { useContext } from "react"
+import countContext from "../context/globalCotext"
+
 
 
 function Movie_list() {
     const [movies, setMovies] = useState([])
 
+    const { setIsLoading } = useContext(countContext)
+
     function fetchMovies() {
+
+        setIsLoading(true)
         axios.get("http://127.0.0.1:3000/movies")
             .then((res) => setMovies(res.data))
             .catch((error) => console.error("errore durante il caricamento", error))
+            .finally(() => setIsLoading(false))
     }
 
     useEffect(fetchMovies, [])

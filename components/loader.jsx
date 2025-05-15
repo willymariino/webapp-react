@@ -1,7 +1,7 @@
 function Loader() {
 
     return (
-        <div> Caricamento in corso... <i class="fa-solid fa-spinner"></i></div>
+        <div> Caricamento in corso... <i className="fa-solid fa-spinner"></i></div>
     )
 }
 
