@@ -4,37 +4,29 @@ import Homepage from "../pages/homepage"
 import About from "../pages/about"
 import Movie_list from "../pages/movie-list"
 import Movie_detail from "../pages/movie_detail"
-import countContext from "../context/globalCotext"
-import { useState } from "react"
-
 
 function App() {
 
-  const [isLoading, setIsLoading] = useState(false)
 
   return (
     <>
+      <BrowserRouter>
 
-      <countContext.Provider value={{ isLoading, setIsLoading }}>
-        <BrowserRouter>
+        <Routes>
 
-          <Routes>
-
-            <Route Component={DefaultLayout}>
-              <Route index Component={Homepage} />
-              <Route path="/homepage" Component={Homepage} />
-              <Route path="/about" Component={About} />
-              <Route path="/movie-list" Component={Movie_list} />
-              <Route path="/movie-list/movie-detail/:id" Component={Movie_detail} />
-            </Route>
+          <Route Component={DefaultLayout}>
+            <Route index Component={Homepage} />
+            <Route path="/homepage" Component={Homepage} />
+            <Route path="/about" Component={About} />
+            <Route path="/movie-list" Component={Movie_list} />
+            <Route path="/movie-list/movie-detail/:id" Component={Movie_detail} />
+          </Route>
 
 
 
-          </Routes>
+        </Routes>
 
-        </BrowserRouter>
-
-      </countContext.Provider>
+      </BrowserRouter>
 
     </>
   )
