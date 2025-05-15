@@ -4,32 +4,38 @@ import axios from "axios"
 import MovieCard from "../components/movieCard"
 import ReviewCard from "../components/reviewCard"
 import ReviewForm from "../components/addReview"
+import { useContext } from "react"
+import countContext from "../context/globalCotext"
 
 
 function Movie_detail() {
     const [movie, setMovie] = useState(null)
-    const [loading, setLoading] = useState(true)
+    //  const [loading, setLoading] = useState(true)
     const { id } = useParams()
 
+    const { setIsLoading } = useContext(countContext)
+
+
     function getMovies() {
+        setIsLoading(true)
         axios.get("http://127.0.0.1:3000/movies/" + id)
             .then((res) => {
                 setMovie(res.data)
-                setLoading(false)
+                // setLoading(false)
             })
-            .catch((error) => console.error("errore durante il caricamento", error)
-            )
+            .catch((error) => console.error("errore durante il caricamento", error))
+            .finally(() => setIsLoading(false))
     }
 
     useEffect(getMovies, [id])
 
-    if (loading) {
-        return (
-            <div>
-                caricamento in corso...
-            </div>
-        )
-    }
+    // if (loading) {
+    //     return (
+    //         <div>
+    //             caricamento in corso...
+    //         </div>
+    //     )
+    // }
 
     return (
         <>
