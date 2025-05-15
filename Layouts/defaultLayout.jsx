@@ -7,7 +7,7 @@ import countContext from "../context/globalCotext";
 
 function DefaultLayout() {
 
-    const { isLoading } = useContext(countContext)
+
 
     return (
         <>
@@ -15,7 +15,7 @@ function DefaultLayout() {
             <Navbar />
             { }
             <Outlet />
-            {isLoading && <Loader />}
+
         </>
     )
 }
