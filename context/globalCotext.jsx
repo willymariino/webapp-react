@@ -1,5 +1,5 @@
 import { createContext } from "react";
 
-const countContext = createContext()
+const GlobalContext = createContext()
 
-export default countContext
+export default GlobalContext

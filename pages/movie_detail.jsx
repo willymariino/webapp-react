@@ -5,7 +5,7 @@ import MovieCard from "../components/movieCard"
 import ReviewCard from "../components/reviewCard"
 import ReviewForm from "../components/addReview"
 import { useContext } from "react"
-import countContext from "../context/globalCotext"
+import GlobalContext from "../context/globalCotext"
 
 
 function Movie_detail() {
@@ -13,9 +13,12 @@ function Movie_detail() {
     const { id } = useParams()
 
 
+    const { setIsLoading } = useContext(GlobalContext)
 
 
     function getMovies() {
+
+        setIsLoading(true)
 
         axios.get("http://127.0.0.1:3000/movies/" + id)
             .then((res) => {
@@ -23,7 +26,7 @@ function Movie_detail() {
 
             })
             .catch((error) => console.error("errore durante il caricamento", error))
-
+            .finally(() => setIsLoading(false))
     }
 
     useEffect(getMovies, [id])
