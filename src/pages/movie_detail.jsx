@@ -5,7 +5,7 @@ import MovieCard from "../components/movieCard"
 import ReviewCard from "../components/reviewCard"
 import ReviewForm from "../components/addReview"
 import { useContext } from "react"
-import GlobalContext from "../context/globalCotext"
+import GlobalContext from "../context/globalContext"
 
 
 function Movie_detail() {

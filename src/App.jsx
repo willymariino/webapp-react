@@ -4,7 +4,7 @@ import Homepage from "./pages/homepage"
 import About from "./pages/about"
 import Movie_list from "./pages/movie-list"
 import Movie_detail from "./pages/movie_detail"
-import GlobalContext from "./context/globalCotext"
+import GlobalContext from "./context/globalContext"
 import { useState } from "react"
 
 

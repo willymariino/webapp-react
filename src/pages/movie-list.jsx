@@ -2,7 +2,7 @@ import axios from "axios"
 import { useState, useEffect } from "react"
 import MovieCard from "../components/movieCard"
 import { useContext } from "react"
-import GlobalContext from "../context/globalCotext"
+import GlobalContext from "../context/globalContext"
 
 
 function Movie_list() {
