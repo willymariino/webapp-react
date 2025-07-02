@@ -37,10 +37,12 @@ To run the full stack application on your machine:
 You can import the database using either:
 
 **Terminal:**
+
+> Run this command from inside the `webapp-express/` folder
+
 ```bash
-mysql -u root -p movie_db < backend/database/movies_db.sql
+mysql -u root -p movie_db < database/movies_db.sql
 ```
-(Make sure to run this command from the root of the backend repository (webapp-express), or adjust the path accordingly.)
 
 **Or via MySQL Workbench:**
 
@@ -64,17 +66,25 @@ mysql -u root -p movie_db < backend/database/movies_db.sql
 
 4. **Configure environment variables**
 
-Create a `.env` file inside the `webapp-express/backend/` directory with the following content:
+You can configure the backend environment in two ways:
 
-```
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=your_mysql_password
-DB_NAME=movie_db
-PORT=3000
-```
+- **Option A (recommended):** From inside the `webapp-express/` folder, run:
 
-> Replace `your_mysql_password` with your actual MySQL root password.
+  ```bash
+  cp .env.example .env
+  ```
+
+  Then open `.env` and replace `your_mysql_password` with your actual MySQL root password.
+
+- **Option B:** Create a `.env` file manually with the following content:
+
+  ```
+  DB_HOST=localhost
+  DB_USER=root
+  DB_PASSWORD=your_mysql_password
+  DB_NAME=movie_db
+  PORT=3000
+  ```
 
 5. Start the backend (`npm run dev`) 
 6. Start the frontend (`npm run dev`) 
