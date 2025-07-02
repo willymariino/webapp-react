@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import DefaultLayout from "../Layouts/defaultLayout"
-import Homepage from "../pages/homepage"
-import About from "../pages/about"
-import Movie_list from "../pages/movie-list"
-import Movie_detail from "../pages/movie_detail"
-import GlobalContext from "../context/globalCotext"
+import DefaultLayout from "./Layouts/defaultLayout"
+import Homepage from "./pages/homepage"
+import About from "./pages/about"
+import Movie_list from "./pages/movie-list"
+import Movie_detail from "./pages/movie_detail"
+import GlobalContext from "./context/globalCotext"
 import { useState } from "react"
 
 
