@@ -15,8 +15,8 @@ It demonstrates core concepts in building a SPA that interacts with a real backe
 - **API Integration**: Built to consume data from a Node.js + Express + MySQL backend.
 
 ## Tech Stack
-- **React** with React Router
-- **Axios** for HTTP requests
+- **React** 19.0.0
+- **Vite** 6.2.0
 - **CSS3** for styling
 - **Node.js + Express + MySQL** (backend) [Backend Repo](https://github.com/willymariino/webapp-express.git)
 - **Netlify** for client deployment
