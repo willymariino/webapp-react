@@ -1,12 +1,52 @@
-# React + Vite
+# Full Stack Blog Platform – Frontend
+[![Live Demo](https://img.shields.io/badge/live-demo-brightgreen)](https://webapp-frontend-react.netlify.app/movie-list)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
+This project is the frontend of a full stack blog platform built with React, consuming a RESTful API developed in Node.js and backed by a MySQL database. 
+It demonstrates core concepts in building a SPA that interacts with a real backend, including API calls, dynamic rendering, and responsive UI.
 
-Currently, two official plugins are available:
+> **Note:** The backend is not currently deployed online, so the live demo on Netlify will only display the static UI without loading dynamic data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- **Home Page & Posts List**: Displays a list of blog posts fetched from the backend API.
+- **Single Post Detail**: Dynamic routing to view individual post details.
+- **Create Post**: Form to create new posts (when backend is connected).
+- **Responsive Layout**: Works across desktop and mobile devices.
+- **API Integration**: Built to consume data from a Node.js + Express + MySQL backend.
 
-## Expanding the ESLint configuration
+## Tech Stack
+- **React** with React Router
+- **Axios** for HTTP requests
+- **CSS3** for styling
+- **Node.js + Express + MySQL** (backend) [Backend Repo](https://github.com/willymariino/webapp-express.git)
+- **Netlify** for client deployment
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Live Demo
+[WebApp movies](https://webapp-frontend-react.netlify.app/movie-list)
+
+## How to Run Locally
+To run the full stack application on your machine:
+1. Clone this repository and the [Backend repository](https://github.com/willymariino/webapp-express.git)
+2. Install dependencies in each folder (`npm install`).
+3. Start the backend (`npm run dev`) 
+4. Start the frontend (`npm run dev`) 
+5. Navigate to the front page with the url provided by vite (`http://localhost:5173/`)
+
+## Folder Structure
+```
+webapp-react/
+├── public/
+│   └── _redirects
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── context/
+│   ├── layouts/
+│   ├── pages/
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── package.json
+├── vite.config.js
+```
