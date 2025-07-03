@@ -52,7 +52,7 @@ mysql -u root -p movie_db < database/movies_db.sql
 - Make sure your local MySQL server is running and accessible
 - Select the `movie_db` schema in the sidebar
 - Go to **File > Run SQL Script...**
-- Select `movies_db.sql` (from `backend/database/`)
+- Select `movies_db.sql`(from the database/ folder inside webapp-express)
 - Click “Run”
 
 **Option B — “Data Import / Restore”**
