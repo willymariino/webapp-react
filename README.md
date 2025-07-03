@@ -58,11 +58,12 @@ mysql -u root -p movie_db < database/movies_db.sql
 **Option B — “Data Import / Restore”**
 
 - Open MySQL Workbench
-- Go to **Server > Data Import**
+- Go to **Administration > Data Import/restore**
 - Select **"Import from Self-Contained File"**
 - Choose the file `movies_db.sql`
 - Choose or create the schema `movie_db` as the target
 - Click “Start Import”
+- Refresh all the schema
 
 4. **Configure environment variables**
 
@@ -88,7 +89,7 @@ You can configure the backend environment in two ways:
 
 5. Start the backend (`npm run dev`) 
 6. Start the frontend (`npm run dev`) 
-7. Navigate to the front page with the url provided by vite in the client App (`http://localhost:5173/`)
+7. Navigate to the home page with the url provided by vite in the client App (`http://localhost:5173/`)
 
 ## Folder Structure
 ```
