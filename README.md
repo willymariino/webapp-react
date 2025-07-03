@@ -3,7 +3,7 @@
 
 ## Project Overview
 This project is the frontend of a full stack blog platform built with React, consuming a RESTful API developed in Node.js and backed by a MySQL database. 
-It demonstrates core concepts in building a SPA that interacts with a real backend, including HTTP requests, dynamic rendering, and responsive UI.
+It demonstrates core concepts in building a SPA that interacts with a real backend, making HTTP requests, dynamic rendering, and responsive UI.
 
 > **Note:** The backend is not currently deployed online, so the live demo on Netlify will only display the static UI without loading dynamic data.
 
@@ -18,7 +18,7 @@ It demonstrates core concepts in building a SPA that interacts with a real backe
 - **React** 19.0.0
 - **Vite** 6.2.0
 - **CSS3** for styling
-- **Node.js + Express + MySQL** (backend) [Backend Repo](https://github.com/willymariino/webapp-express.git)
+- **Node.js + Express + MySQL** (backend) --> [Backend Repo](https://github.com/willymariino/webapp-express.git)
 - **Netlify** for client deployment
 
 ## Live Demo
