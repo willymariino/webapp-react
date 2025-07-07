@@ -1,7 +1,7 @@
 # Full Stack Blog Platform – Frontend
 [![Live Demo](https://img.shields.io/badge/live-demo-brightgreen)](https://webapp-frontend-react.netlify.app/movie-list)
 
-## Project Overview
+## Project Overview 
 This project is the frontend of a full stack blog platform built with React, consuming a RESTful API developed in Node.js and backed by a MySQL database. 
 It demonstrates core concepts in building a SPA that interacts with a real backend, making HTTP requests, dynamic rendering, and responsive UI.
 
