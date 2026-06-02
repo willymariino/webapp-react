@@ -10,10 +10,13 @@ function Movie_list() {
 
     const { setIsLoading } = useContext(GlobalContext)
 
+    const baseUrl = import.meta.env.VITE_API_URL || "https://webapp-express.onrender.com";
+    const endpoint = `${baseUrl}/movies`
+
     function fetchMovies() {
 
         setIsLoading(true)
-        axios.get("http://127.0.0.1:3000/movies")
+        axios.get(endpoint)
             .then((res) => setMovies(res.data))
             .catch((error) => console.error("errore durante il caricamento", error))
             .finally(() => setIsLoading(false))

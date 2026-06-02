@@ -15,12 +15,14 @@ function Movie_detail() {
 
     const { setIsLoading } = useContext(GlobalContext)
 
+    const baseUrl = import.meta.env.VITE_API_URL || "https://webapp-express.onrender.com";
+    const endpoint = `${baseUrl}/movies/${id}`;
 
     function getMovies() {
 
         setIsLoading(true)
 
-        axios.get("http://127.0.0.1:3000/movies/" + id)
+        axios.get(endpoint)
             .then((res) => {
                 setMovie(res.data)
 
