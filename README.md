@@ -1,16 +1,14 @@
-# Full Stack Blog Platform – Frontend
+# Full Stack Movie Platform – Frontend
 [![Live Demo](https://img.shields.io/badge/live-demo-brightgreen)](https://webapp-frontend-react.netlify.app/movie-list)
 
 ## Project Overview 
-This project is the frontend of a full stack blog platform built with React, consuming a RESTful API developed in Node.js and backed by a MySQL database. 
-It demonstrates core concepts in building a SPA that interacts with a real backend, making HTTP requests, dynamic rendering, and responsive UI.
-
-> **Note:** The backend is not currently deployed online, so the live demo on Netlify will only display the static UI without loading dynamic data.
+This project is the frontend of a full stack movie platform built with React, consuming a RESTful API developed in Node.js and backed by a MySQL database. 
+It demonstrates core concepts in building a SPA that interacts with a backend, making HTTP requests, dynamic rendering, and responsive UI.
 
 ## Features
-- **Home Page & Posts List**: Displays a list of blog posts fetched from the backend API.
+- **Home Page & Posts List**: Displays a list of movies fetched from the backend API.
 - **Single Post Detail**: Dynamic routing to view individual post details.
-- **Create Post**: Form to create new posts (when backend is connected).
+- **Create Post**: Form to create new posts 
 - **Responsive Layout**: Works across desktop and mobile devices.
 - **API Integration**: Built to consume data from a Node.js + Express + MySQL backend.
 
@@ -20,6 +18,8 @@ It demonstrates core concepts in building a SPA that interacts with a real backe
 - **CSS3** for styling
 - **Node.js + Express + MySQL** (backend) --> [Backend Repo](https://github.com/willymariino/webapp-express.git)
 - **Netlify** for client deployment
+- **Aiven** (Cloud MySQL Database hosting)
+- **Render** (Backend deployment)
 
 ## Live Demo
 [WebApp movies](https://webapp-frontend-react.netlify.app/movie-list)
