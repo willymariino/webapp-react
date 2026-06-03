@@ -8,7 +8,8 @@ function ReviewForm({ movie_id, refreshMovie }) {
         vote: 1
     }
 
-
+    const baseUrl = import.meta.env.VITE_API_URL || "https://webapp-express.onrender.com";
+    const endpoint = `${baseUrl}/movies/${movie_id}/reviews`;
 
     const [formData, setFormData] = useState(initialValues)
 
@@ -34,7 +35,7 @@ function ReviewForm({ movie_id, refreshMovie }) {
         console.log(formData)
         console.log(movie_id)
 
-        axios.post(`http://127.0.0.1:3000/movies/${movie_id}/reviews`, formData)
+        axios.post(endpoint, formData)
             .then(response => {
                 refreshMovie()
             })
