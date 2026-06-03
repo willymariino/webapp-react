@@ -36,13 +36,19 @@ nav {
 
 .movie-container {
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   margin-top: 2%;
 }
 
 .card {
-  width: calc((100% - 60px) / 4);
+  margin: 10px;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.card-image {
+  margin: 0 auto;
 }
 
 .movie-detail-container {
@@ -72,5 +78,43 @@ nav {
   padding: 1% !important;
   background-color: rgba(30, 210, 207, 0.1);
   box-shadow: 0 0 10px rgba(128, 128, 128, 0, 5);
-  /*  bootstrap mi sovrascrive il css allargandomi i container delle recensioni*/
+  margin: 0 auto;
+}
+
+.add-review form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 650px) {
+
+  .movie-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 370px;
+
+  }
+
+  .review-card {
+    border: 2px solid rgba(128, 128, 128, 0.5);
+    min-width: 350px !important;
+    border-radius: 35px !important;
+    padding: 20px !important;
+    margin: 0 auto;
+  }
+
+  .add-review form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+
 }

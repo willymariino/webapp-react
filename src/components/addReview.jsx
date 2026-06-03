@@ -48,7 +48,7 @@ function ReviewForm({ movie_id, refreshMovie }) {
 
         <>
             <form onSubmit={sendData}>
-                <div className="card container d-flex justify-content-center mt-3 w-50">
+                <div className="card container d-flex justify-content-center mt-3 w-100 w-md-50">
                     <div className="card-header">
                         Scrivi una recensione su questo film
                     </div>
