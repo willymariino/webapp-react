@@ -2,7 +2,7 @@ function Header() {
     return (
         <>
             <header>
-                <h1 className="main-title">il mio blog movies</h1>
+                <h1 className="main-title">Movies database App</h1>
 
             </header>
         </>

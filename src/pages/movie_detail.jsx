@@ -40,7 +40,7 @@ function Movie_detail() {
     return (
         <>
             <div className="detail-header">
-                <h1 className="detail-title">dettaglio del film: </h1>
+                <h1 className="detail-title">Movie Details</h1>
             </div>
             <div className="movie-detail-container">
 

@@ -12,11 +12,11 @@ function MovieCard({ movie }) {
 
             <div className="card-content">
                 <h2>{movie.title}</h2>
-                <p><strong>Regista:</strong> {movie.director}</p>
-                <p><strong>Genere:</strong> {movie.genre}</p>
-                <p><strong>Anno:</strong> {movie.release_year}</p>
+                <p><strong>Director:</strong> {movie.director}</p>
+                <p><strong>Genre:</strong> {movie.genre}</p>
+                <p><strong>Year:</strong> {movie.release_year}</p>
                 <p>{movie.abstract}</p>
-                <p><strong>Media recensioni: </strong>{movie.media_recensioni || "N.D."}</p>
+                <p className="card-reviews"><strong>Average reviews: </strong>{movie.media_recensioni || "N.D."}</p>
             </div>
 
         </div >

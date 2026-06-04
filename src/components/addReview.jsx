@@ -51,32 +51,57 @@ function ReviewForm({ movie_id, refreshMovie }) {
             <form onSubmit={sendData}>
                 <div className="card container d-flex justify-content-center mt-3 w-100 w-md-50">
                     <div className="card-header">
-                        Scrivi una recensione su questo film
+                        write a review for this movie
                     </div>
                     <div className="card-body">
 
                         <div className="mb-3">
-                            <label htmlFor="reviewer-name" className="form-label">nome recensore</label>
-                            <input type="text" className="form-control" id="reviewer-name" placeholder="inserisci il tuo nome" value={formData.name} name="name"
+                            <label htmlFor="reviewer-name" className="form-label">Reviewer name</label>
+                            <input
+                                type="text"
+                                className="form-control"
+                                id="reviewer-name"
+                                placeholder="Enter your name"
+                                value={formData.name}
+                                name="name"
                                 onChange={handleFormData} />
                         </div>
 
 
                         <div className="mb-3">
-                            <label htmlFor="review-text" className="form-label">testo della recensione</label>
-                            <textarea className="form-control" id="review-text" rows="3" value={formData.text} name="text"
-                                onChange={handleFormData}></textarea>
+                            <label htmlFor="review-text" className="form-label">Review text</label>
+                            <textarea
+                                className="form-control"
+                                id="review-text"
+                                rows="3"
+                                value={formData.text}
+                                name="text"
+                                onChange={handleFormData}
+                                maxLength={200}
+                                placeholder="Write your thoughts here..."
+                            />
                         </div>
 
 
                         <div className="mb-3">
-                            <label htmlFor="review-vote" className="form-label">voto:</label>
-                            <input type="number" min={1} max={5} className="form-control" id="review-vote" value={formData.vote} name="vote"
+                            <label htmlFor="review-vote" className="form-label">Rating:</label>
+                            <input
+                                type="number"
+                                min={1}
+                                max={5}
+                                className="form-control"
+                                id="review-vote"
+                                value={formData.vote}
+                                name="vote"
                                 onChange={handleFormData} />
                         </div>
 
+                        <div className="mb-3 text-muted" style={{ fontSize: '0.85rem' }}>
+                            <p className="mb-1">* Please avoid multiple or spam reviews, database storage is limited!</p>
+                        </div>
+
                         <div className="mb-3">
-                            <button type="submit" className="btn btn-primary">aggiungi</button>
+                            <button type="submit" className="btn btn-primary">Add Review</button>
                         </div>
 
 

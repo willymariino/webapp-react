@@ -26,7 +26,7 @@ function Movie_list() {
 
     return (
         <>
-            <h1>lista dei movies</h1>
+            <h1 className="list-title">Movies List</h1>
 
             <div className="movie-container">
                 {movies.map((movie, index) =>
