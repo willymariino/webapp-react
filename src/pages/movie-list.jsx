@@ -7,15 +7,18 @@ import GlobalContext from "../context/globalContext"
 
 function Movie_list() {
     const [movies, setMovies] = useState([])
+    const [errorMessage, setErrorMessage] = useState(null)
 
     const { setIsLoading } = useContext(GlobalContext)
 
-    const baseUrl = import.meta.env.VITE_API_URL || "https://webapp-express.onrender.com";
+    const baseUrl = import.meta.env.VITE_API_URL
     const endpoint = `${baseUrl}/movies`
+
 
     function fetchMovies() {
 
         setIsLoading(true)
+        setErrorMessage(null)
         axios.get(endpoint)
             .then((res) => setMovies(res.data))
             .catch((error) => console.error("errore durante il caricamento", error))

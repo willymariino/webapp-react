@@ -8,7 +8,7 @@ function ReviewForm({ movie_id, refreshMovie }) {
         vote: 1
     }
 
-    const baseUrl = import.meta.env.VITE_API_URL || "https://webapp-express.onrender.com";
+    const baseUrl = import.meta.env.VITE_API_URL
     const endpoint = `${baseUrl}/movies/${movie_id}/reviews`;
 
     const [formData, setFormData] = useState(initialValues)

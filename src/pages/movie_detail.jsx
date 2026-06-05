@@ -15,8 +15,8 @@ function Movie_detail() {
 
     const { setIsLoading } = useContext(GlobalContext)
 
-    const baseUrl = import.meta.env.VITE_API_URL || "https://webapp-express.onrender.com";
-    const endpoint = `${baseUrl}/movies/${id}`;
+    const baseUrl = import.meta.env.VITE_API_URL
+    const endpoint = `${baseUrl}/movies/${id}`
 
     function getMovies() {
 
