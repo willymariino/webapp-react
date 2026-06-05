@@ -34,9 +34,6 @@ nav {
   color: blue;
 }
 
-.card-image {
-  max-width: 70%;
-}
 
 .movie-container {
   display: flex;
@@ -59,14 +56,31 @@ nav {
   padding: 15px;
 }
 
+.card.card-detail {
+  width: 50%;
+}
+
 .card-reviews {
   margin-top: auto;
 
 }
 
-.card-image {
+.card-image-container {
   margin: 0 auto;
+  max-width: 80%;
 }
+
+.card-image.list {
+  max-width: 70%;
+  margin-left: 20%;
+}
+
+.card-image.detail {
+  width: 40%;
+  margin-bottom: 4%;
+  margin-left: 25%;
+}
+
 
 .movie-detail-container {
   display: flex;
@@ -105,6 +119,17 @@ nav {
 }
 
 @media screen and (max-width: 650px) {
+
+  .card.card-detail {
+    width: 100%;
+  }
+
+  .card-image.detail {
+    width: 80%;
+    margin-bottom: 4%;
+    margin-left: 10%;
+  }
+
 
   .list-title {
     text-align: center;

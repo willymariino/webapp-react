@@ -44,7 +44,7 @@ function Movie_detail() {
             </div>
             <div className="movie-detail-container">
 
-                {movie && <MovieCard movie={movie} />}
+                {movie && <MovieCard movie={movie} variant="detail" variant2="card-detail" />}
 
             </div>
 

@@ -34,7 +34,7 @@ function Movie_list() {
             <div className="movie-container">
                 {movies.map((movie, index) =>
                     movie ? (
-                        <MovieCard key={movie.id || index} movie={movie} />
+                        <MovieCard key={movie.id || index} movie={movie} variant="list" />
                     ) : null
                 )}
             </div>

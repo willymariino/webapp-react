@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom"
 
-function MovieCard({ movie }) {
+function MovieCard({ movie, variant, variant2 }) {
     return (
-        <div className="card">
+        <div className={`card ${variant2}`}>
 
-            <div className="card-image">
+            <div className="card-image-container">
                 <Link to={"movie-detail/" + movie.id}>
-                    <img src={movie.image} alt={movie.title} className="card-image" />
+                    <img src={movie.image} alt={movie.title} className={`card-image ${variant}`} />
                 </Link>
             </div>
 
