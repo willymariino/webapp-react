@@ -5,6 +5,10 @@
 This project is the frontend of a full stack movie platform built with React, consuming a RESTful API developed in Node.js and backed by a MySQL database. 
 It demonstrates core concepts in building a SPA that interacts with a backend, making HTTP requests, dynamic rendering, and responsive UI.
 
+>  **Backend note**
+> The backend API is deployed to Render. Render services enter sleep mode after ~15 minutes of inactivity; when the API is cold, expect a ~30–40 second delay for the first request while the service wakes up.
+
+
 ## Features
 - **Home Page & Posts List**: Displays a list of movies fetched from the backend API.
 - **Single Post Detail**: Dynamic routing to view individual post details.
