@@ -10,7 +10,7 @@ It demonstrates core concepts in building a SPA that interacts with a backend, m
 
 
 ## Features
-- **Home Page & Posts List**: Displays a list of movies fetched from the backend API.
+- **Home Page & Movie List**: Displays a list of movies fetched from the backend API.
 - **Single Post Detail**: Dynamic routing to view individual movie details.
 - **Movie Reviews System**: Users can add reviews for each movie, stored persistently in a MySQL database via the backend API.
 - **Responsive Layout**: Works across desktop and mobile devices.
